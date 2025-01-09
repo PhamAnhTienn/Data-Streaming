@@ -197,10 +197,6 @@ def generate_data():
         music_data = generate_music_data(keyword)
         weather_data = generate_weather_data(city)
         
-        print(youtube_data)
-        print(music_data)
-        print(weather_data)
-        
         produce_data_to_kafka(producer, YOUTUBE_TOPIC, youtube_data)
         produce_data_to_kafka(producer, MUSIC_TOPIC, music_data)
         produce_data_to_kafka(producer, WEATHER_TOPIC, weather_data)
